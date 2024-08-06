@@ -1,5 +1,5 @@
 Type-2 Fuzzy System for Fan Speed Control
-# Type2FLS
+# Type2 Fuzzy Logic System
 
 This repository contains a Python implementation of a Type-2 Fuzzy Logic System designed to control fan speed based on temperature input. The system uses fuzzy logic principles to handle uncertainty and make decisions about the appropriate fan speed.
 
