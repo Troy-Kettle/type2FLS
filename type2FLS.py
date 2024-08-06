@@ -74,7 +74,7 @@ class Type2FuzzySystem:
 fuzzy_system = Type2FuzzySystem()
 
 # Define temperature input
-temperature_input = 28
+temperature_input = 38
 
 # Get the fan speed output
 fan_speed = fuzzy_system.run(temperature_input)
