@@ -41,22 +41,7 @@ public:
 
         return {std::max(0.0, std::min(primaryMembership + fMax, 1.0)),
                 std::max(0.0, std::min(primaryMembership - fMin, 1.0))};
-    }
 
-    // Apply fuzzy rules and compute fan speed
-    std::vector<double> applyRules(double temp) {
-        std::vector<double> fanSpeeds = {0, 0, 0}; // Slow, Medium, Fast
-
-        auto coldFuzzy = fuzzySet(temp, "Cold");
-        auto neutralFuzzy = fuzzySet(temp, "Neutral");
-        auto hotFuzzy = fuzzySet(temp, "Hot");
-
-        if (coldFuzzy[0] > 0) fanSpeeds[0] += coldFuzzy[0]; // Slow
-        if (neutralFuzzy[0] > 0) fanSpeeds[1] += neutralFuzzy[0]; // Medium
-        if (hotFuzzy[0] > 0) fanSpeeds[2] += hotFuzzy[0]; // Fast
-
-        return fanSpeeds;
-    }
 
     // Defuzzification
     double defuzzify(const std::vector<double>& fanSpeeds) {
